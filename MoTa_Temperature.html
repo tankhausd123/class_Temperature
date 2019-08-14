@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    function Temperature(k, f) {
+
+        this.setºC = function () {
+            this.ºC = Number(prompt("Nhập ºC: "));
+        };
+
+        this.getChuyenSangºF = function () {
+            return this.ºC * 1.8 + 32;
+        };
+        this.getChuyenSangºK = function () {
+            return this.ºC + 273.15;
+        };
+    }
+
+    let temprature = new Temperature();
+    temprature.setºC();
+    document.write( temprature.ºC + "ºC =   " + temprature.getChuyenSangºF() + "ºF =  " + temprature.getChuyenSangºK() + "ºK");
+</script>
+</body>
+</html>
